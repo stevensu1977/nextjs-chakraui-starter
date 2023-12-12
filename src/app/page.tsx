@@ -8,6 +8,8 @@ import {
 
 interface Props { }
 
+import Link from 'next/link'
+
 const LandingPage: React.FC<Props> = () => {
     const { colorMode, toggleColorMode } = useColorMode()
 
@@ -41,15 +43,15 @@ const LandingPage: React.FC<Props> = () => {
             <Stack spacing={8} direction={{ base: 'column', md: 'row' }} mt={10}>
                 <Box>
                     <Text fontSize="xl" fontWeight="bold">Feature 1</Text>
-                    <Text>Description of feature 1</Text>
+                    <Text>Description of feature 1,<Link href="/blog/readme">read more...</Link></Text>
                 </Box>
                 <Box>
                     <Text fontSize="xl" fontWeight="bold">Feature 2</Text>
-                    <Text>Description of feature 2</Text>
+                    <Text>Description of feature 2, <Link href="/blog/product">read more...</Link></Text>
                 </Box>
                 <Box>
                     <Text fontSize="xl" fontWeight="bold">Feature 3</Text>
-                    <Text>Description of feature 3</Text>
+                    <Text>Description of feature 3,<Link href="/blog/about">read more...</Link></Text>
                 </Box>
             </Stack>
 
